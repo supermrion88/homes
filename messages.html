@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title> do you remember?. </title>
+<link rel="icon" type="image/x-icon" href="./files/icon.jpg">
+<style>
+.mbody {
+	margin-top:70px; 
+	margin-bottom:70px; 
+	margin-left:70px; 
+	margin-right:70px; 
+	background-color:#F88379; 
+	overflow-x: hidden;
+}
+ 
+.mtitle {
+	font-weight:bold;
+	font-size:700%;
+	text-align:center;
+	font-family:sans; 
+	color:#F2D2BD;
+}
+
+.mtext {
+	color: #F2D2BD;
+	font-size: 40px;
+	text-align: center;
+	font-weight: bold;
+	font-family: arial;
+}
+
+.mwords {
+	position: relative;
+	animation: move-words 35s linear infinite;
+	margin: 0;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: arial;
+	color: #F2D2BD;
+}
+
+@keyframes move-words {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.mimg {
+	border: 5px dashed #F2D2BD;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.75;
+	display: block;
+}
+
+#container
+{
+    height:2000px;    
+}
+
+#container DIV
+{ 
+    margin:50px; 
+    padding:50px; 
+     
+}
+
+.hideme
+{
+    opacity:0;
+}
+
+</style>
+<script>
+$(function(){  // $(document).ready shorthand
+  $('.monster').fadeIn('slow');
+});
+
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+</script>
+</head>
+
+<body class="mbody">
+<div id="container">
+<h1 class="mtitle" id="monster"> remember? </h1>
+
+<div class="mtext" id="hideme">
+<p> can you remember? </p>
+<br>
+<p> i hope you can remember me.  </p>
+<br>
+<p> i hope you know that this is still me, but better. the same boy who worked so hard to be called a man by you, it's still me. the same boy who said "anything for you, princess." i was hoping that you'd see me after what had happened. i hope that you can be mine again, for i will prove you that i want nothing else but your loyalty and love in exchange of my all. </p>
+<br>
+<p> come home to me, my heart. i've shown you that i'm up for nothing else but you and i will still keep on showing it to you. let me lead, my heart. for i will take you to the places that you've always wanted to have been in and i'll give you the richest of my love. </p>
+<br>
+<p> look at me. look at my eyes and hug me as tight as you could. kill me with the grip of your arms wrapped around my neck as i'll die before you're able to kill me. hold me tight as i will do the same and i'll assure you that my whole person belongs to you and no one else's. </p>
+<br> 
+<p> i'll give you everything, my heart. i will give you all of me until i no longer can and i only need you to trust me, even with the slightest bit, i need you to try. </p>
+</div>
+
+<h1 class="mtitle"> come home. </h1>
+<div class="mtext" id="hideme">
+<p> come home, my heart. you're all in the whole world that matters to me. i need you back home and i need you now. please hold me again. please hold me with the strongest of you and i'll make sure that you will never fall. please come home, my heart. the food's getting cold and i'm afraid of being alone at night. please come home, my heart. i wouldn't work hard to buy a bed where only i'll sleep in it. please come home, my heart. i feel really lonely, i need you and nobody else. please come home, my heart. i haven't been productive enough lately and i couldn't water the plants without you. please come home, my heart. </p>
+<br>
+<p> please come home na, my heart. don't be scared as i'll lead you. i promise i'll make you feel safe, just come home to me now. </p>
+</div>
+
+<br>
+<br>
+</body>
+</html>
